@@ -30,11 +30,11 @@ eg6 is executing a stratified cross validation, since it's dividint the set in s
 
 ### eg7
 
-eg7 runs j48 and jrip 5 times each.
+eg7 runs j48 and jrip 5 times each, randomizing the cross validation also 5 times. It also saves the output of the prediction into an _out_ file, and also saves the recall and precision values for both learners in fies called _out.pd_ and _out.pf_ respectively.
 
 ### eg8
 
-eg8 runs j48 and jrip 5 times each.
+eg8 does the same as eg7, but instead of saving the recall and precision information using _gawk_, it uses column names to make it more readable.
 
 ### eg9
 
@@ -42,5 +42,9 @@ eg9 shows the recall and fall-out rates for both algorithms, and also on which p
 
 ### eg10
 
-eg10 shows the same as eg9, but for 5 different algorithms, and it also runs the algorithms. 
+eg10 runs 4 different algorithms, with those being j48, jrip, nb, rbfnet and bnet. It also uses a new dataset called jedit-4.1.arff, and as in eg8, it uses _gawk_ to store the precision and recall information for each algorithm. It also prints a table similar to the one in eg9, where we can see in which percentile the values for precision and recall fall for each algorithm.
+
+j48 is actually an open source java implementation of the C4.5 algorithm, and it works by building decision trees based on the entropy of every attribute from the training set and recursively splitting the set into subsets based on the smallest entropy.
+
+nb is the weka implementation of the naive bayes classifier, which is based on the Bayes Theorem with an assumption of independence among the features. It works by estimating the probability of a specific feature belonging to a class, and it then pics the one with the highest probability. 
 
