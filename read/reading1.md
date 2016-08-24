@@ -24,6 +24,8 @@
 
 ###iv. Improvements
 
-    iv1.
-    iv2.
-    iv3.
+    iv1. Show comparisons between their results and results with other techniques from other papers.
+    
+    iv2. Explain better why one would still prefer to use to use a local or global approach instead of the hybrid one.
+    
+    iv3. See if different clustering algorithms can affect the prediction outcome of local models.
