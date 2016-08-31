@@ -6,7 +6,8 @@ class Table:
 	def __init__(self,csv):
 		self.csv = csv
 		self.rows = []
-		self.cols = [syms.Sym(),nums.Num(),nums.Num(),syms.Sym(),nums.Num()]
+		headings = rows.csv(csv).next()
+		self.cols = [syms.Sym(headings[0]),nums.Num(headings[1]),nums.Num(headings[2]),syms.Sym(headings[3]),nums.Num(headings[4])]
 
 
 	def add_rows(self, csv):
@@ -20,5 +21,5 @@ class Table:
 
 table = Table(sys.argv[1])
 table.add_rows(sys.argv[1])
-# for col in table.cols:
-#   col.show()
+for col in table.cols:
+	col.show()

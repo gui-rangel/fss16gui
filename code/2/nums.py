@@ -2,8 +2,8 @@ def max(x,y) : return x if x>y else y
 def min(x,y) : return x if x<y else y
 
 class Num:
-  def __init__(i):
-    i.mu,i.n,i.m2,i.up,i.lo = 0,0,0,-10e32,10e32
+  def __init__(i,name):
+    i.mu,i.n,i.m2,i.up,i.lo,i.name = 0,0,0,-10e32,10e32,name
   def add(i,x):
     i.n += 1
     x = float(x)
@@ -21,7 +21,5 @@ class Num:
   def sd(i):
     return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
   def show(i):
-    print "Num"
-    print "Mean:" + str(i.mu)
-    print "Standard Deviation:" + str(i.sd())
+    print i.name + " - Mean: " + str(i.mu) + "; Standard Deviation: " + str(i.sd())
     
