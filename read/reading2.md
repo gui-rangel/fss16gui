@@ -4,13 +4,13 @@ Posnett, Daryl, Vladimir Filkov, and Premkumar Devanbu. "Ecological inference in
 
 ###ii. Keywords
 
-ii1. 
+ii1. Software hierarchy: Software systems can be decomposed hierarchically into modules, packages and files. This has a great influence on the evolvability and maintainability of a software product, and on defining work assignment. 
 
-ii2. 
+ii2. Empirical software engineering: ESE is mainly concerned with 
     
-ii3. 
+ii3. Ecological inference (in the SE context): 
     
-ii4. 
+ii4. Ecological fallacy (in the SE context): 
 
 ###iii. Notes
 
