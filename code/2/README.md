@@ -18,6 +18,7 @@ Trust you instincts and get out if you can.
 
 ## ZeroR
 
+For the ```jedit-4.1.arff``` dataset Zeror finds that ```false``` is the majority class, thus predicting ```false``` for everything. Because of that, c=d=0, causing pd and pf to also be 0.
 
 ```
 pd
