@@ -25,8 +25,8 @@ iii4. Sampling procedures: Data was extracted from the JIRA defect tracking syst
 
 ###iv. Improvements
 
-iv1. 
+iv1. Try this analysis on proprietary repositories to see if the results hold.
 
-iv2. 
+iv2. Investigate the effects of sample size, zonation and class imbalance on ecological inference.
 
-iv3. 
+iv3. Investigate the results with respect to bigger datasets and on a bigger number of different projects.
