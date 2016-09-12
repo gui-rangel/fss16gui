@@ -21,6 +21,7 @@ iii2. Hypotheses: This paper presents a public benchmark for defect prediction, 
 iii3. Data: The prediction dataset used is a collection of models and metrics of five software systems and their histories, composed of the change, bug and version information. The goal of such a dataset is to allow researchers to compare different defect prediction approaches and to evaluate whether a new technique is an improvement over existing ones. The criteria for choosing these specific systems are: size and lifetime, homogeneous language and the availability of the data.
     
 iii4. Informative visualizations: Table 5
+to be finished...
 
 ###iv. Improvements
 
