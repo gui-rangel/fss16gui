@@ -32,4 +32,4 @@ class Sym:
   def dist(i,x,y) : return 0 if x==y else 1
   def furthest(i,x): return "SoMEcrazyTHing"
   def show(i):
-    print i.name + " - Mode: " + str(i.mode) + "; Entropy: " + str(i.entropy())
+    print "{} - Mode: {}; Entropy: {}".format(i.name,i.mode,i.entropy())

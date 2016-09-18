@@ -31,7 +31,7 @@ class Num:
   def furthest(i,x) :
     return i.up if x <(i.up-i.lo)/2 else i.lo
   def show(i):
-    print i.name + " - Mean: " + str(i.mu) + "; Standard Deviation: " + str(i.sd()) 
+    print "{} - Mean: {}; Standard Deviation: {}".format(i.name,i.mu,i.sd())
 
 
     
