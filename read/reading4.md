@@ -1,16 +1,14 @@
 ###i. Reference
 
-Hassan, Ahmed E. "Predicting faults using the complexity of code changes." Proceedings of the 31st International Conference on Software Engineering. IEEE Computer Society, 2009.
+Hassan, Ahmed E. "Predicting faults using the complexity of code changes" Proceedings of the 31st International Conference on Software Engineering. IEEE Computer Society, 2009.
 
 ###ii. Keywords
 
-ii1. Code fault: 
+ii1. Code fault: During the development process, developers might accidentally code a functionality that they did not intend to put there initially. Likewise, sometimes when you add pieces of different software together, they might present a behavior that was different than the expected one. That and other cases can be classified as code faults, or more colloquially code bugs, where parts of the software are malfunctioning in a way that is different than the expected outcome.
 
-ii2. Fault prediction:
+ii2. Fault prediction: By using many different techniques, such as data mining, machine learning, etc., one can try to predict whether a particular piece of software is likely or not to present a code fault in the future. Such application is primal for early detection of defects that can have a high impact on the overall functionality of the system in the future.
 
-ii3. Complex code change process: 
-
-ii4. Source code metrics: 
+ii3. Complex code change process: Modifications are done by developers to implement new features and repair faults. By studying these patterns and quantifying their degree of complexity over time, it's possible to achieve a better understanding of the complexity facing developers who are evolving and working on a project. 
 
 ###iii. Notes
 
