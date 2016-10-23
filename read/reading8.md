@@ -1,7 +1,6 @@
 ###i. Reference
 
-Nam, Jaechang, and Sunghun Kim. "Heterogeneous defect prediction." Proceedings of the 2015 10th joint meeting on foundations of software engineering. ACM, 2015.
-APA	
+Wang, Song, Taiyue Liu, and Lin Tan. "Automatically learning semantic features for defect prediction." Proceedings of the 38th International Conference on Software Engineering. ACM, 2016.	
 
 ###ii. Keywords
 
@@ -15,25 +14,21 @@ ii4. Crossproject Defect Prediction: Crossproject Defect Prediction is normally 
 
 ###iii. Notes
 
-iii1. Motivational Statements: Crossproject Defect Prediction requires projects to have a similar metric set, meaning the metric sets should be identical between projects. As a result, current techniques for Crossproject Defect Prediction are difficult to apply across projects with heterogeneous metric sets.
+iii1. 
 
-iii2. Hypotheses: To address this limitation, the paper proposes heterogeneous defect prediction (HDP) to predict defects across projects with heterogeneous metric sets. The HDP approach conducts metric selection and metric matching to build a prediction model between projects with heterogeneous metric sets.
+iii2. 
 
-iii3. Datasets Used: 
+iii3. 
 
-![alt text](https://github.com/gui-rangel/fss16gui/edit/master/read/r7data.png "Dataset Used")
- 
 
-iii4. Baseline Results: 
-
-![alt text](https://github.com/gui-rangel/fss16gui/edit/master/read/r7results.png "Results Obtained")
+iii4. 
 
 
 ###iv. Improvements
 
-iv1. Results obtained might not hold if industrial projects were used instead of open source projects.
+iv1. 
 
-iv2. While area under curve (AUC) is a good measure for comparing different prediction models, more experiments nee to be done to see if precision and recall values are also desirable.
+iv2. 
 
-iv3. Instead of using a 50/50% split between training and testing sets, cross-validation might be more desirable.
+iv3. 
 
