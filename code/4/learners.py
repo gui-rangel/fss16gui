@@ -2,7 +2,7 @@ from table import Table
 from random import random,shuffle,seed
 import time
 import numpy as np
-import pandas as pd
+import pandas
 from sk import rdivDemo
 from ABCD import ABCD
 
@@ -10,7 +10,7 @@ from ABCD import ABCD
 def split(corpus, folds=5, index=0):
     i_major, i_minor = [], []
     l = len(corpus)
-    corpus=pd.DataFrame({"A":corpus})
+    corpus=pandas.DataFrame({"A":corpus})
     for i in range(0, folds):
         if i == index:
             i_minor.extend(range(int(i * l / folds), int((i + 1) * l / folds)))
@@ -56,11 +56,11 @@ if __name__ == '__main__':
     datasets=['diabetes.csv','jedit-3.2.csv','ivy-2.0.csv']
     folds=5
     seed(1)
-    recall, false_alarm, runtime = {},{},{} 
+    pd, pf, rt = {},{},{} 
     trees=['knn','kmeans','kd']
     for k in datasets:
-        recall[k], false_alarm[k], runtime[k] = {},{},{}
-        for x in trees: recall[k][x], false_alarm[k][x], runtime[k][x] =[], [], 0
+        pd[k], pf[k], rt[k] = {},{},{}
+        for x in trees: pd[k][x], pf[k][x], rt[k][x] =[], [], 0
         table = Table('./'+k)
         for i in xrange(folds):
             shuffle(table.rows)
@@ -73,37 +73,35 @@ if __name__ == '__main__':
                 start_time = time.time()
                 prediction = knn(table, data_train, data_test)
                 abcd = ABCD(before=test_label, after=prediction)
-                recall[k]['knn'].append(np.array([j.stats()[0] for j in abcd()])[0])
-                false_alarm[k]['knn'].append(([j.stats()[1] for j in abcd()])[0])
-                runtime[k]['knn'] += time.time() - start_time
+                pd[k]['knn'].append(np.array([j.stats()[0] for j in abcd()])[0])
+                pf[k]['knn'].append(([j.stats()[1] for j in abcd()])[0])
+                rt[k]['knn'] += time.time() - start_time
 
                 start_time = time.time()
                 prediction = kmeans(data_train, data_test)
                 abcd = ABCD(before=test_label, after=prediction)
-                recall[k]['kmeans'].append(np.array([j.stats()[0] for j in abcd()])[0])
-                false_alarm[k]['kmeans'].append(([j.stats()[1] for j in abcd()])[0])
-                runtime[k]['kmeans'] += time.time() - start_time
+                pd[k]['kmeans'].append(np.array([j.stats()[0] for j in abcd()])[0])
+                pf[k]['kmeans'].append(([j.stats()[1] for j in abcd()])[0])
+                rt[k]['kmeans'] += time.time() - start_time
 
                 start_time = time.time()
                 prediction = kdtree(data_train, data_test)
                 abcd = ABCD(before=test_label, after=prediction)
-                recall[k]['kd'].append(np.array([j.stats()[0] for j in abcd()])[0])
-                false_alarm[k]['kd'].append(([j.stats()[1] for j in abcd()])[0])
-                runtime[k]['kd'] += time.time() - start_time
-    # print(recall)
-    # print(false_alarm)
-    # print(runtime)
+                pd[k]['kd'].append(np.array([j.stats()[0] for j in abcd()])[0])
+                pf[k]['kd'].append(([j.stats()[1] for j in abcd()])[0])
+                rt[k]['kd'] += time.time() - start_time
 
-    ## scottknot code taken from Dr Menzies
     for feature in datasets:
         tmp = []
         temp1=[]
         print(feature)
         for tree in trees:
-                tmp.append([tree] + recall[feature][tree])
-                temp1.append([tree] + false_alarm[feature][tree])
+                tmp.append([tree] + pd[feature][tree])
+                temp1.append([tree] + pf[feature][tree])
         print("Recall")
         print(rdivDemo(tmp))
         print("False Alarm")
         print(rdivDemo(temp1))
         print("\n")
+
+    print(rt)
