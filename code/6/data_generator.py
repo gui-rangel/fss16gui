@@ -4,8 +4,6 @@ import numpy as np
 import math
 from ABCD import ABCD
 
-from sklearn.naive_bayes import GaussianNB
-
 def data_generator(table):
     data = table.rows
     while len(data) < 2000:
